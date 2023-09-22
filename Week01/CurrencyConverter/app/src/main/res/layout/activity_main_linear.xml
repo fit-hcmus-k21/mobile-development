@@ -10,6 +10,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding = "12dp"
+        android:textSize="24dp"
+        android:textColor="#8008"
+
+        android:gravity="center_horizontal"
+        android:icon="@mipmap/ic_launcher"
+        android:text="Currency Converter 😀" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -78,6 +96,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#8008"
+            android:layout_margin="12dp"
+
             android:text="Clear" />
 
         <Button
@@ -85,6 +106,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
+            android:background="#8008"
+            android:layout_margin="12dp"
             android:text="Convert" />
     </LinearLayout>
 </LinearLayout>
