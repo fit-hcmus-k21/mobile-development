@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
-import androidx.core.view.WindowCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -18,6 +17,7 @@ import com.example.currencyconverter.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+
 
 public class MainActivity extends AppCompatActivity {
 
