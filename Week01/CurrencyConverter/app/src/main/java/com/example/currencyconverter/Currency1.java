@@ -78,6 +78,4 @@ public class Currency1 extends Activity {
             }
         });
     }
-
-
 }
