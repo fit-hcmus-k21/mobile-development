@@ -8,17 +8,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        >
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
+
+            android:textSize="16dp"
             android:text="Username" />
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+
+            android:background="@android:drawable/editbox_background"
+            />
 
     </LinearLayout>
 
@@ -26,17 +35,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        >
 
         <TextView
             android:id="@+id/password"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Password" />
+            android:layout_weight="2"
+
+            android:textSize="16dp"
+            android:text="Password"
+            />
 
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:background="@android:drawable/editbox_background"
+            />
 
     </LinearLayout>
 
@@ -44,17 +62,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        >
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Retype" />
+            android:layout_weight="2"
+
+            android:text="Retype"
+            android:textSize="16dp"
+            />
 
         <EditText
             android:id="@+id/retype"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:background="@android:drawable/editbox_background"
+            />
 
     </LinearLayout>
 
@@ -62,33 +89,50 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Birthdate" />
+            android:text="Birthdate"
+            android:textSize="16dp"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            >
 
             <EditText
-                android:layout_width="wrap_content"
+                android:id="@+id/birthdate"
+
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_weight="3"
-                android:hint="dd/mm/yyyy"
-                android:inputType="date"
+                android:layout_weight="5"
+                android:background="@android:drawable/editbox_background"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
 
+                android:hint="dd/mm/yyyy"
+                android:inputType="none"
+                android:gravity="center"
                 />
 
             <Button
-                android:layout_width="wrap_content"
+                android:id="@+id/selectBtn"
+
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
                 android:text="Select" />
 
         </LinearLayout>
@@ -99,26 +143,41 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+
+        >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16dp"
             android:text="Gender" />
 
         <RadioGroup
+            android:id="@+id/gender"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
 
             <RadioButton
+                android:id="@+id/maleGender"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+
                 android:text="Male" />
 
             <RadioButton
+                android:id="@+id/femaleGender"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:text="Female" />
 
 
@@ -131,31 +190,53 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+
+        >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:textSize="16dp"
             android:text="Hobbies" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            >
 
             <CheckBox
-                android:layout_width="wrap_content"
+                android:id="@+id/tennisHbb"
+
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Tennis" />
+                android:layout_weight="1"
+
+                android:text="Tennis"
+
+                />
 
             <CheckBox
-                android:layout_width="wrap_content"
+                android:id="@+id/footballHbb"
+
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+
                 android:text="Football" />
 
             <CheckBox
-                android:layout_width="wrap_content"
+                android:id="@+id/othersHbb"
+
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+
                 android:text="Others" />
         </LinearLayout>
 
@@ -173,6 +254,8 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/resetBtn"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
@@ -181,6 +264,8 @@
             android:text="Reset" />
 
         <Button
+            android:id="@+id/signupBtn"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"

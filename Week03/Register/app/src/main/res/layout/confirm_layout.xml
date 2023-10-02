@@ -10,9 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp"
-        >
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="36dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -35,86 +34,137 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
             >
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+
                 android:text="Username: "
+                android:textSize="16dp"
                 />
+
             <TextView
-                android:layout_width="wrap_content"
+
+                android:id="@+id/usernameInView"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="NguyenVanA"
-                />
+                android:layout_weight="3"
+
+                android:textSize="16dp"
+                android:text="NguyenVanA" />
         </LinearLayout>
         <!--        password   -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
             >
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+
                 android:text="Password: "
+                android:textSize="16dp"
                 />
+
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/passwordInView"
+
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="3"
+
+                android:textStyle="bold"
                 android:inputType="textPassword"
-                android:text="02/10/2023"
-                />
+                android:textSize="16dp"
+                android:text="02/10/2023" />
         </LinearLayout>
+
         <!--        Birthdate   -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
             >
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+
                 android:text="Birthdate: "
+                android:textSize="16dp"
                 />
+
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/birthdateInView"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="20/10/1989"
-                />
+                android:layout_weight="3"
+
+                android:textSize="16dp"
+                android:text="20/10/1989" />
         </LinearLayout>
+
         <!--        Gender   -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
             >
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+
                 android:text="Gender: "
+                android:textSize="16dp"
                 />
+
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/genderInView"
+
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Male"
-                />
+                android:layout_weight="3"
+
+                android:textSize="16dp"
+                android:text="Male" />
         </LinearLayout>
         <!--        Hobbies  -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
             >
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Hobbies: "
-                />
+                android:layout_weight="1"
+
+                android:textSize="16dp"
+                android:text="Hobbies: " />
+
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/hobbiesInView"
+
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Tennis, Football"
-                />
+                android:layout_weight="3"
+
+                android:textSize="16dp"
+                android:text="Tennis, Football" />
         </LinearLayout>
 
 
@@ -125,12 +175,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:gravity="center"
-        >
+        android:gravity="center">
 
         <Button
+            android:id="@+id/exitBtn"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="Exit" />
     </LinearLayout>
 
