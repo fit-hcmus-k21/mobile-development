@@ -3,31 +3,68 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:layout_margin="16dp"
-              android:orientation="vertical">
+              android:orientation="vertical"
+    >
+    <!--    header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        >
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon_22"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="32dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#8008"
+            android:textStyle="bold"
+            android:typeface="monospace"
+
+            />
+
+    </LinearLayout>
+
     <!--    username -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginBottom="8dp"
-        >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="2.5"
 
-            android:textSize="16dp"
-            android:text="Username" />
+            android:text="Username"
+            android:textColor="@color/black"
+            android:typeface="monospace"
+
+
+
+            android:textSize="18dp" />
 
         <EditText
             android:id="@+id/usernameInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="7"
-
+            android:layout_weight="6"
             android:background="@android:drawable/editbox_background"
-            />
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+
+            android:typeface="monospace"
+
+            android:paddingBottom="8dp"
+            android:textSize="18dp" />
 
     </LinearLayout>
 
@@ -35,27 +72,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginBottom="8dp"
-        >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="2.5"
 
-            android:textSize="16dp"
             android:text="Password"
-            />
+            android:textColor="@color/black"
+            android:typeface="monospace"
+
+
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/passwordInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="7"
-
+            android:layout_weight="6"
             android:background="@android:drawable/editbox_background"
-            />
+            android:inputType="textPassword"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+
+            android:typeface="monospace"
+
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="18dp" />
 
     </LinearLayout>
 
@@ -63,26 +109,36 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginBottom="8dp"
-        >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="2.5"
 
             android:text="Retype"
-            android:textSize="16dp"
-            />
+            android:textColor="@color/black"
+            android:typeface="monospace"
+
+
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/retypeInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="7"
+            android:layout_weight="6"
             android:background="@android:drawable/editbox_background"
-            />
+            android:inputType="textPassword"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:typeface="monospace"
+
+            android:textSize="18dp" />
 
     </LinearLayout>
 
@@ -90,41 +146,44 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="16dp"
         android:layout_marginTop="8dp"
-        >
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Birthdate"
-            android:textSize="16dp"
-            />
+            android:textColor="@color/black"
+            android:typeface="monospace"
+
+
+            android:textSize="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="8dp"
-            >
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/birthdateInput"
 
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_weight="5"
+                android:layout_weight="4"
                 android:background="@android:drawable/editbox_background"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:paddingRight="20dp"
-                android:paddingLeft="20dp"
-
-                android:hint="dd/mm/yyyy"
                 android:gravity="center"
+                android:hint="dd/mm/yyyy"
+                android:paddingLeft="12dp"
+                android:paddingTop="8dp"
+
+                android:paddingRight="12dp"
+                android:paddingBottom="8dp"
+                android:textSize="18dp"
+                android:typeface="monospace"
+
                 />
 
             <Button
@@ -133,7 +192,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
-                android:text="Select" />
+                android:text="Select"
+                android:typeface="monospace"
+                />
 
         </LinearLayout>
 
@@ -143,25 +204,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginBottom="16dp"
+        android:orientation="vertical"
 
         >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="Gender" />
+            android:text="Gender"
+            android:textColor="@color/black"
+            android:typeface="monospace"
+
+
+            android:textSize="20dp" />
 
         <RadioGroup
             android:id="@+id/genderInput"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:gravity="center"
-            >
+            android:orientation="horizontal">
 
             <RadioButton
                 android:id="@+id/maleGenderInput"
@@ -170,6 +234,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="40dp"
 
+                android:typeface="monospace"
+                android:textSize="14dp"
                 android:text="Male" />
 
             <RadioButton
@@ -178,6 +244,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
+                android:typeface="monospace"
+                android:textSize="14dp"
                 android:text="Female" />
 
 
@@ -190,8 +258,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginBottom="16dp"
+        android:orientation="vertical"
 
         >
 
@@ -199,16 +267,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:textSize="16dp"
-            android:text="Hobbies" />
+            android:text="Hobbies"
+            android:textColor="@color/black"
+            android:typeface="monospace"
+
+            android:textSize="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            >
+            android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/tennisHobbiesInput"
@@ -218,6 +288,8 @@
                 android:layout_weight="1"
 
                 android:text="Tennis"
+                android:textSize="14dp"
+                android:typeface="monospace"
 
                 />
 
@@ -228,6 +300,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
 
+                android:typeface="monospace"
+                android:textSize="14dp"
                 android:text="Football" />
 
             <CheckBox
@@ -236,6 +310,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textSize="14dp"
 
                 android:text="Others" />
         </LinearLayout>
@@ -247,7 +322,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="60dp"
         android:layout_marginRight="20dp"
@@ -256,20 +330,22 @@
         <Button
             android:id="@+id/resetBtn"
 
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
+            android:layout_marginRight="20dp"
+
             android:layout_weight="1"
+            android:typeface="monospace"
             android:text="Reset" />
 
         <Button
             android:id="@+id/signupBtn"
 
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp"
+            android:layout_marginLeft="20dp"
+            android:typeface="monospace"
+
             android:layout_weight="1"
             android:text="Sign-up" />
 
