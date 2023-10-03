@@ -31,6 +31,20 @@ public class ActivityReceiver extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+//        --------------------------------------------------------
+//        Toast.makeText(getApplicationContext(), "onCreate in receiver", Toast.LENGTH_SHORT).show();
+
+//        return Register activity if user has just exited
+        SharedPreferences sharedPreferences = getSharedPreferences("appPrefs", Context.MODE_PRIVATE);
+        boolean isExited = sharedPreferences.getBoolean("isExited", false);
+
+        if (isExited) {
+
+            Intent intent = new Intent(ActivityReceiver.this, ActivitySender.class);
+            startActivity(intent);
+            finish();
+        }
+//          ------------------------------------------------------
 //        Toast.makeText(getApplicationContext(), "In receiver activity now !", Toast.LENGTH_SHORT).show();
 
 //        display new layout in view
@@ -68,7 +82,14 @@ public class ActivityReceiver extends AppCompatActivity {
             exitBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    finish();
+//                    -----------------------------------------------------
+                    SharedPreferences sharedPreferences = getSharedPreferences("appPrefs", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("isExited", true);
+                    editor.apply();
+//                    -----------------------------------------------------
+
+                    finishAffinity();
                 }
             });
     }
