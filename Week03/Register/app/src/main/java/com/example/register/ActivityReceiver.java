@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
@@ -30,6 +31,11 @@ public class ActivityReceiver extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+//        Toast.makeText(getApplicationContext(), "In receiver activity now !", Toast.LENGTH_SHORT).show();
+
+//        display new layout in view
+        setContentView(R.layout.confirm_layout);
+
 //        match java objects
         usernameInView = findViewById(R.id.usernameInView);
         passwordInView = findViewById(R.id.passwordInView);
@@ -39,7 +45,32 @@ public class ActivityReceiver extends AppCompatActivity {
 
         exitBtn = findViewById(R.id.exitBtn);
 
+//        receive data from bundle intent and display in view
+        Bundle receiverBundle = getIntent().getExtras();
+        if (receiverBundle != null) {
+//            get data to show
+            String username = receiverBundle.getString("username");
+            String password = receiverBundle.getString("password");
+            String birthdate = receiverBundle.getString("birthdate");
+            String gender = receiverBundle.getString("gender");
+            String hobbies = receiverBundle.getString("hobbies");
+
+//            show in view
+            usernameInView.setText(username);
+            passwordInView.setText(password);
+            birthdateInView.setText(birthdate);
+            genderInView.setText(gender);
+            hobbiesInView.setText(hobbies);
+        }
+
+
 //        1. set event onClick Exit button | exit app immediately
+            exitBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                }
+            });
     }
 
 
