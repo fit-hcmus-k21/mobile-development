@@ -39,6 +39,7 @@ public class ActivitySender extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setTitle("");
 
 //        ---------------------------------------------------------
 //        Notes: because when i exit app from ActivityReceiver and open app again,

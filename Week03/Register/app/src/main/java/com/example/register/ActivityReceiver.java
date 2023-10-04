@@ -30,7 +30,7 @@ public class ActivityReceiver extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        this.setTitle("");
 //        --------------------------------------------------------
 //        Toast.makeText(getApplicationContext(), "onCreate in receiver", Toast.LENGTH_SHORT).show();
 
