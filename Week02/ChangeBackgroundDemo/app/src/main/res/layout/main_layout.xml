@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/mainLayout"
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+    <EditText
+        android:id="@+id/colorSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+
+        android:hint="Pick background color: red, blue, green,violet, orange, pink, gray, ..."
+
+
+        />
+
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="32dp"
+        android:paddingLeft="32dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="@drawable/custom_button"
+
+
+        android:text="Exit"
+        android:layout_marginLeft="12dp"
+        android:textColor="#CCFFFF"
+        android:fontFamily="monospace"
+
+    />
+
+    <TextView
+        android:id="@+id/spyBox"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="spy box - try clicking Home and Back"
+        />
+
+</LinearLayout>
