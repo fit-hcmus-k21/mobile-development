@@ -70,10 +70,13 @@ public class MainActivity extends Activity {
 //                    get sub list from parent list
                     List<String> names = listNames.subList(i, endIndex);
                     List<String> numbers = phoneNumbers.subList(i, endIndex);
-                    List<Integer> icons = new ArrayList<>();
+                    List<Integer> icons = new ArrayList<Integer>();
 
-                    if (i + CONTACT_PER_PAGE > NUMBER_ICONS) {
-                        icons = listIcons.subList(i % NUMBER_ICONS, endIndex % NUMBER_ICONS);
+                    if (i + CONTACT_PER_PAGE >= NUMBER_ICONS) {
+                        Random generator = new Random();
+                        int ranStartIndex = generator.nextInt(NUMBER_ICONS - CONTACT_PER_PAGE);
+                        int endId = ranStartIndex + (endIndex - i);
+                        icons = listIcons.subList(ranStartIndex, endId);
                     } else {
                         icons = listIcons.subList(i, endIndex);
                     }
@@ -99,7 +102,6 @@ public class MainActivity extends Activity {
                 }
 
 
-
 //              set adapter for spinner
                 ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(getApplication(), androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, pageNumberSpinner);
                 pageSpinner.setAdapter(spinnerAdapter);
@@ -109,7 +111,7 @@ public class MainActivity extends Activity {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long l) {
 //                        current page
-                        int currentPage = pos ;
+                        int currentPage = pos;
 
 //                        get list contact for current page
                         List<String> currentNames = pageNames.get(pos);
@@ -176,10 +178,10 @@ public class MainActivity extends Activity {
 //        format of img file name: icon_XX.jpg || XX is number from 01 - 38
         String name = "icon_";
 
-        for (int i = 0; i < num; i++) {
-            String id = num < 10 ? "0" + num : String.valueOf(num);
-            name += id;
-            Integer resId = rs.getIdentifier(name, "drawable", getPackageName());
+        for (int i = 1; i <= num ; i++) {
+            String id = i < 10 ? "0" + i : String.valueOf(i);
+
+            Integer resId = rs.getIdentifier(name + id, "drawable", getPackageName());
             icons.add(resId);
         }
 
