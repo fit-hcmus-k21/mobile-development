@@ -31,23 +31,32 @@
 
             <EditText
                 android:id="@+id/numGenEditText"
-                android:layout_width="48dp"
-                android:layout_height="wrap_content" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:textAlignment="center"
+
+                />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
 
                 android:fontFamily="monospace"
                 android:text="Page"
-                android:textSize="18dp"
+                android:textSize="20dp"
 
 
                 />
@@ -55,7 +64,7 @@
             <Spinner
                 android:id="@+id/pageSpinner"
 
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
@@ -75,7 +84,7 @@
         android:paddingTop="8dp"
 
         android:paddingBottom="8dp"
-        android:text="You choose: "
+        android:text=" "
         android:textSize="18dp" />
 
     <ListView
