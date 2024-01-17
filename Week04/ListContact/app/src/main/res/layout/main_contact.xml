@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<!--    tilte + group number-->
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="List Contact"
+        android:textSize="30dp"
+        android:background="@color/light_blue"
+        android:padding="10dp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnGen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gen"
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_button"
+
+
+            android:layout_marginRight="10dp" />
+
+        <EditText
+            android:id="@+id/txtChooseNumber"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnGen"
+            android:layout_alignBottom="@+id/btnGen"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toRightOf="@+id/btnGen"
+            android:background="@drawable/border"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/txtPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Page"
+            android:textSize="25dp"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/txtChooseNumber"/>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txtPage"
+                android:background="@drawable/border"
+                android:layout_marginTop="5dp"
+                android:layout_alignBottom="@+id/btnGen"
+                android:layout_alignTop="@+id/btnGen">
+                <Spinner
+                    android:id="@+id/spnPage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+
+                    android:padding="5dp"
+                    android:layout_toRightOf="@+id/txtPage"
+                    />
+            </LinearLayout>
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/txtChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="25dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"/>
+    <ListView
+        android:id="@+id/listContact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/strong_orange"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@color/orange"/>
+    <TextView
+        android:id="@+id/emptyList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"/>
+
+    </LinearLayout>
+</LinearLayout>
